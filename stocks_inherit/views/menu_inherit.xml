@@ -1,0 +1,9 @@
+<odoo>
+    <record id="stock.stock_move_line_menu" model="ir.ui.menu">
+        <field name="name">Historial de movimientos</field>
+    </record>
+
+    <record id="stock.stock_move_menu" model="ir.ui.menu">
+        <field name="name">Movimientos de existencia</field>
+    </record>
+</odoo>

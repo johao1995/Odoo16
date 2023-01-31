@@ -1,0 +1,13 @@
+<odoo>
+    <record  id="om_account_followup.action_customer_followup" model="ir.actions.act_window">
+        <field name="name">Seguimientos Manuales</field>
+    </record>
+
+    <record  id="om_account_followup.action_customer_my_followup" model="ir.actions.act_window">
+        <field name="name">Mis Seguimientos</field>
+    </record>
+
+    <record id="om_account_followup.action_followup_stat" model="ir.actions.act_window">
+        <field name="name">Analisis de Seguimiento</field>
+    </record>
+</odoo>

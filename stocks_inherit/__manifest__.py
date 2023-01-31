@@ -1,0 +1,11 @@
+{
+    'name':'stocks_inherit',
+    'depends':[
+        'base',
+        'stock'
+    ],
+    'data':[
+        'views/view_stock_picking_form.xml',
+        'views/menu_inherit.xml'
+    ]
+}

@@ -1,0 +1,21 @@
+<odoo>
+    <record id="om_account_followup.menu_finance_followup" model="ir.ui.menu">
+        <field name="name">Seguimientos</field>
+    </record>
+
+    <record id ="om_account_followup.om_account_followup_print_menu" model="ir.ui.menu">
+        <field name="name">Enviar cartas y correo electronicos</field>
+    </record>
+
+    <record id="om_account_followup.om_account_followup_s" model="ir.ui.menu">
+        <field name="name">Seguimientos Manuales</field>
+    </record>
+
+    <record id="om_account_followup.menu_sale_followup" model="ir.ui.menu">
+        <field name="name">Mis Seguimientos</field>
+    </record>
+
+    <record id="om_account_followup.menu_action_followup_stat_follow"  model="ir.ui.menu">
+        <field name="name">Analisis de Seguimiento</field>
+    </record>
+</odoo>

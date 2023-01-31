@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_purchase_order_inherit" model="ir.ui.view">
+        <field name="name">view.purcharse.order.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_create_invoice'][2]" position="attributes">
+                <attribute name="string">Registrar Factura</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
