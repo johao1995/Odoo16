@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_account_asset_depreciation_line_tree_inherit" model="ir.ui.view">
+        <field name="name">view.account.asset.depreciation.line.tree.inherit</field>
+        <field name="model">account.asset.asset</field>
+        <field name="inherit_id" ref="om_account_asset.view_account_asset_asset_form"/>
+        <field name="arch" type="xml">
+
+            <!--Notebook Junta de Depreciacion -->
+            <xpath expr="//sheet/notebook/page[1]" position="attributes">
+                <attribute name="string">Junta de Depreciación</attribute>
+            </xpath>
+           
+            <xpath expr="//sheet/notebook/page[1]/field[@name='depreciation_line_ids']/tree/field[@name='depreciation_date']" position="attributes">
+                <attribute name="string">Fecha de depreciacion</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/notebook/page[1]/field[@name='depreciation_line_ids']/tree/field[@name='amount']" position="attributes">
+                <attribute name="string">Depreciación</attribute>
+            </xpath>
+
+             <xpath expr="//sheet/notebook/page[1]/field[@name='depreciation_line_ids']/tree/field[@name='depreciated_value']" position="attributes">
+                <attribute name="string">Depreciación acumulada</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/notebook/page[1]/field[@name='depreciation_line_ids']/tree/field[@name='remaining_value']" position="attributes">
+                <attribute name="string">Residual</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/notebook/page[1]/field[@name='depreciation_line_ids']/tree/field[@name='move_check']" position="attributes">
+                <attribute name="string">Vinculado</attribute>
+            </xpath>
+        </field>
+    </record>
+    <!--
+    <record id="view_account_asset_depreciation_line_form_inherit" model="ir.ui.view">
+        <field name="name">name</field>
+    </record>-->
+</odoo>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <!--Modificando los campos del model account_asset_asset mediante herencia"-->
+
+    <record id="view_account_asset_asset_inherit_form" model="ir.ui.view">
+        <field name="name">view.account.asset.asset.inherit.form</field>
+        <field name="model">account.asset.asset</field>
+        <field name="inherit_id" ref="om_account_asset.view_account_asset_asset_form"/>
+
+        <field name="arch" type="xml">
+            <!--buttons-->
+            <xpath expr="//button[@name='validate']" position="attributes">
+                <attribute name="string">CONFIRMAR</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='compute_depreciation_board']" position="attributes">
+                <attribute name="string">CALCULAR DEPRECIACIÓN</attribute>
+            </xpath>
+	   
+            <xpath expr="//button[@name='set_to_close']" position="attributes">
+                <attribute name="string">VENDER O DESECHAR</attribute>
+            </xpath>
+	    
+            <xpath expr="//button[@name='set_to_draft']" position="attributes">
+                <attribute name="string">ESTABLECER COMO BORRADOR</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='499']" position="attributes">
+                <attribute name="string">MODIFICAR DEPRECIACION</attribute>
+            </xpath>
+           
+
+            <!--field name-->
+            <xpath expr="//sheet/div[2]/h1/field[@name='name']" position="attributes">
+                <attribute name="string">Nombre del activo</attribute>
+            </xpath>
+
+            <!--group[1]-->
+            <xpath expr="//sheet/group/group[1]/field[@name='category_id']" position="attributes">
+                <attribute name="string">Categoría de activos</attribute>
+            </xpath>
+
+             <xpath expr="//sheet/group/group[1]/field[@name='code']" position="attributes">
+                <attribute name="string">referencia</attribute>
+            </xpath>
+
+             <xpath expr="//sheet/group/group[1]/field[@name='date']" position="attributes">
+                <attribute name="string">Fecha </attribute>
+            </xpath>
+
+             <xpath expr="//sheet/group/group[1]/field[@name='date_first_depreciation']" position="attributes">
+                <attribute name="string">Fechas de depreciación</attribute>
+            </xpath>
+
+             <xpath expr="//sheet/group/group[1]/field[@name='first_depreciation_manual_date']" position="attributes">
+                <attribute name="string"> Primera fecha de depreciación</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group/group[1]/field[@name='account_analytic_id']" position="attributes">
+                <attribute name="string">cuenta analitica</attribute>
+            </xpath>
+
+            <!--group[2]-->
+
+	    <xpath expr="//sheet/group/group[2]/field[@name='currency_id']" position="attributes">
+                <attribute name="string">Moneda </attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group/group[2]/field[@name='value']" position="attributes">
+                <attribute name="string">valor bruto </attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group/group[2]/field[@name='salvage_value']" position="attributes">
+                <attribute name="string">valor de salvamento</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group/group[2]/field[@name='value_residual']" position="attributes">
+                <attribute name="string">valor residual</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group/group[2]/field[@name='partner_id']" position="attributes">
+                <attribute name="string">vendedor</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group/group[2]/field[@name='invoice_id']" position="attributes">
+                <attribute name="string">Factura</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group/group[2]/field[@name='analytic_distribution']" position="attributes">
+                <attribute name="string">analítico </attribute>
+            </xpath>
+            
+          
+            <!--Notebook Informacion de Depreciación-->
+            <xpath expr="//sheet/notebook/page[2]" position="attributes">
+                <attribute name="string">Información de depreciación</attribute>
+            </xpath>
+            <!--group 1-->
+            <xpath expr="//sheet/notebook/page[2]/group[1]/field[@name='method']" position="attributes">
+                <attribute name="string">método de cálculo</attribute>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[2]/group[1]/field[@name='prorata']" position="attributes">
+                <attribute name="string">Tiempo prorrateado</attribute>
+            </xpath>
+	    <xpath expr="//sheet/notebook/page[2]/group[1]/field[@name='method_time']" position="attributes">
+                <attribute name="string">Método de tiempo basado en</attribute>
+            </xpath>
+
+            <!--group 2-->
+            <xpath expr="//sheet/notebook/page[2]/group[2]/field[@name='method_number']" position="attributes">
+                <attribute name="string">Número de depreciaciones</attribute>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[2]/group[2]/field[@name='method_period']" position="attributes">
+                <attribute name="string"> Número de meses en un período</attribute>
+            </xpath>
+            
+        </field>
+    </record>
+
+    <record id="view_account_asset_asset_inherit_tree" model="ir.ui.view">
+        <field name="name">view.account.asset.asset.inherit.tree</field>
+        <field name="model">account.asset.asset</field>
+        <field name="inherit_id" ref="om_account_asset.view_account_asset_asset_purchase_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//tree/field[@name='name']" position="attributes">
+                <attribute name="string">Nombre del activo</attribute>
+            </xpath>
+             <xpath expr="//tree/field[@name='category_id']" position="attributes">
+                <attribute name="string">Categoría del activo</attribute>
+            </xpath>
+             <xpath expr="//tree/field[@name='date']" position="attributes">
+                <attribute name="string">Fecha</attribute>
+            </xpath>
+             <xpath expr="//tree/field[@name='partner_id']" position="attributes">
+                <attribute name="string">Vendedor</attribute>
+            </xpath>
+             <xpath expr="//tree/field[@name='value']" position="attributes">
+                <attribute name="string">Valor bruto</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='value_residual']" position="attributes">
+                <attribute name="string">Valor residual</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='state']" position="attributes">
+                <attribute name="string">Estado</attribute>
+            </xpath>
+            
+        </field>
+    </record>
+</odoo>

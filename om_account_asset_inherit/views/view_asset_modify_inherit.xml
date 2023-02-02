@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="view_asset_modify_inherit_form" model="ir.ui.view">
+        <field name="name">view_asset_modify_inherit_form"</field>
+        <field name="model">asset.modify</field>
+        <field name="inherit_id" ref="om_account_asset.asset_modify_form"/>
+        <field name="arch" type="xml">
+            <!--titulo del wizard-->
+            <xpath expr="//form" position="attributes">
+                <attribute name="string">Modificar Archivo</attribute>
+            </xpath>
+
+            <xpath expr="//form/group[1]" position="attributes">
+                <attribute name="string">DURACIONES DE ACTIVOS PARA MODIFICAR</attribute>
+            </xpath>
+            <!--Campos del model asset.modify-->
+            <xpath expr="//form/group/group[1]/field[@name='name']" position="attributes">
+                <attribute name="string">Razon</attribute>
+            </xpath>
+
+            <xpath expr="//form/group/group[1]/field[@name='method_number']" position="attributes">
+                <attribute name="string">Número de depreciaciones </attribute>
+            </xpath>
+
+            <xpath expr="//form/group/group[2]/div/field[@name='method_period']" position="attributes">
+                <attribute name="string">Duración del período</attribute>
+            </xpath>
+
+            <!--Buttons-->
+            <xpath expr="//form/footer/button[@name='modify']" position="attributes">
+                <attribute name="string">MODIFICAR</attribute>
+            </xpath>
+
+            <xpath expr="//form/footer/button[2]" position="attributes">
+                <attribute name="string">CANCELAR</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
